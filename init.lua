@@ -24,7 +24,7 @@ local spawn_particles = function(pos, palette_index)
 		maxsize = 0.5,
 		collisiondetection = false,
 		vertical = false,
-		texture = "egg.png^[multiply:#"..colored_eggs.colors[palette_index],
+		texture = "egg.png^[multiply:#"..colored_eggs.colors[palette_index+1],
 		glow = 0
 	})
 end
@@ -82,7 +82,7 @@ local shoot_egg = function (item, player, pointed_thing)
 	}, "colored_eggs:entity")
 
 	local palette_index = item:get_meta():get_int("palette_index")
-	obj:set_properties({textures = {"egg.png^[multiply:#"..colored_eggs.colors[palette_index]}})
+	obj:set_properties({textures = {"egg.png^[multiply:#"..colored_eggs.colors[palette_index+1]}})
 
 	local ent = obj:get_luaentity()
 	local dir = player:get_look_dir()
