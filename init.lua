@@ -1,7 +1,7 @@
 colored_eggs = {}
-local modpath = minetest.get_modpath(minetest.get_current_modname())
+local MP = minetest.get_modpath("colored_eggs").."/"
 
-dofile(modpath.."/colors.lua")
+dofile(MP.."colors.lua")
 
 
 -- particles
@@ -148,3 +148,7 @@ unifieddyes.register_color_craft({
 		"MAIN_DYE"
 	}
 })
+
+
+
+print("[MOD] Colored Eggs loaded")
